@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500'); 
+
+body {
+  font-family: "Roboto", sans-Serif;
+}
+* {
+  margin:0px;
+  padding: 0px;
+  list-style: none;
+  text-decoration: none;
+}
+.sidebar {
+  position: fixed;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background: #383838;
+  color:#FFFFFF;
+  transition: all .5s ease;
+ }
+
+.sidebar header {
+  font-size: 22px;
+  color: #fff;
+  text-align: center;
+  line-height: 70px;
+  background: #585454;
+  user-select: none;
+}
+
+.sidebar ul a {
+  display: block;
+  text-transform: uppercase;
+  height: 100%;
+  width: 100%;
+  line-height: 50px;
+  font-size: 14px;
+  color: #fff;
+  padding-left: 10px;
+  border-spacing: border-box;
+  border-top: 1px solid rgba(255,255,255,.2);
+  transition: .4s;
+}
+ul li:hover a{
+  padding-left: 50px;
+}
+
+#check{
+  display: none;
+}
+
+label #btn,label #cancel{
+  position: absolute;
+  background: #383838;
+  border-radius: 4px;
+  cursor: pointer;
+}
+label #btn {
+  left: 50px;
+  top: 20px;
+  font-size: 35px;
+  color: white;
+  padding: 6px 12px;
+  transition: all .5s;
+}
+label #cancel{
+  z-index: 1111;
+  left: -200px;
+  top: 25px;
+  font-size: 15px;
+  color: #ffffff;
+  padding: 4px 9px;
+  transition: all .5s ease;
+}
+#check:checked ~ .sidebar{
+  left: 0;
+}
+#check:checked ~ label #btn{
+  left: 300px;
+  opacity: 0;
+  pointer-events: none;
+}
+#check:checked ~ label #cancel{
+  left: 220px;
+}
+#check:checked ~ section{
+  margin-left: 250px;
+}
+
+#main-doc {
+  position: absolute;
+  margin-left: 320px;
+  padding: 20px;
+  margin-bottom: 110px;
+}
+
+section article {
+  color: #383838;
+  margin: 15px;
+  font-size: 0.98em;
+}
+section li {
+  margin: 15px 0px 0px 20px;
+}
+
+code {
+  display: block;
+  text-align: left;
+  white-space: pre-line;
+  position: relative;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 2;
+  background-color: #383838;
+  padding: 15px;
+  margin: 10px;
+  border-radius: 5px;
+  color: #fff;
+}
+
+@media only screen and (max-width: 815px) {
+  /* For mobile phones: */
+  #navbar ul {
+    border: 1px solid;
+    height: 207px;
+  }
+
+  #navbar {
+    background-color: white;
+    position: absolute;
+    top: 0;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    max-height: 275px;
+    border: none;
+    z-index: 1;
+    border-bottom: 2px solid;
+  }
+
+  #main-doc {
+    position: relative;
+    margin-left: 0px;
+    margin-top: 270px;
+  }
+}
+
+
+
+@media only screen and (max-width: 400px) {
+  #main-doc {
+    margin-left: -10px;
+  }
+
+  code {
+    margin-left: -20px;
+    width: 100%;
+    padding: 15px;
+    padding-left: 10px;
+    padding-right: 45px;
+    min-width: 233px;
+  }
+}
+
+header {
+  text-transform: uppercase;
+  font-weight: semibold;
+}
